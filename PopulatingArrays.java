@@ -56,6 +56,12 @@ final class PopulatingArrays {
             // initialize the sum variable
             int sum = 0;
 
+            // Print the random integers
+            System.out.print("This is the array of random integers: ");
+            for (int index = 0; index < MAX_ARRAY; index++) {
+                System.out.print(arrayRandInts[index] + " ");
+            }
+
             // Sort the array of random integers
             Arrays.sort(arrayRandInts);
 
@@ -65,6 +71,8 @@ final class PopulatingArrays {
             }
             // Calculate the average
             double average = (double) sum / MAX_ARRAY;
+
+            System.out.print("This is the Sorted array of random integers: ");
 
             // Print the sorted array of random integers
             for (int index = 0; index < MAX_ARRAY; index++) {

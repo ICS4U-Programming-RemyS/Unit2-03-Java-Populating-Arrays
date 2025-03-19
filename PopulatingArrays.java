@@ -18,6 +18,16 @@ final class PopulatingArrays {
     public static final int MAX_ARRAY = 10;
 
     /**
+     * LINES variable.
+     */
+    public static final int LINES = 5;
+
+    /**
+     * MAX_VALUE variable.
+     */
+    public static final int MAX_VALUE = 100;
+
+    /**
      * This is a private constructor used to satisfy the
      * style checker.
      *
@@ -36,9 +46,12 @@ final class PopulatingArrays {
 
     public static void main(final String[] args) throws Exception {
         // FOR loop to create 5 line of random integers
-        for (int line = 0; line < 5; line++) {
+        for (int line = 0; line < LINES; line++) {
+            // initialize the array of random integers
+            int[] arrayRandInts = new int[MAX_ARRAY];
+
             // Call the populatingArrays method
-            int[] arrayRandInts = populatingArrays();
+            arrayRandInts = populatingArrays();
 
             // initialize the sum variable
             int sum = 0;
@@ -69,7 +82,7 @@ final class PopulatingArrays {
 
         // For loop to add random integers to the array
         for (int index = 0; index < MAX_ARRAY; index++) {
-            arrayRandInts[index] = (int) (Math.random() * 100) + 1;
+            arrayRandInts[index] = (int) (Math.random() * MAX_VALUE) + 1;
         }
         // Return the array of random integers
         return arrayRandInts;
